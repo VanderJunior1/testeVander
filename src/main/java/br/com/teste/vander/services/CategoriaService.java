@@ -11,7 +11,6 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import br.com.teste.vander.domain.Categoria;
-import br.com.teste.vander.domain.Categoria;
 import br.com.teste.vander.domain.dto.CategoriaDTO;
 import br.com.teste.vander.respositories.CategoriaRepository;
 import br.com.teste.vander.services.exceptions.DataIntegrityException;
