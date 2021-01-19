@@ -1,7 +1,6 @@
 package br.com.teste.vander.domain.dto;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -24,7 +23,7 @@ public class ProdutoDTO implements Serializable {
 	@Length(min = 5, max = 80, message = "O tamanho deve ser entre 5 e 80 caracteres")
 	private String nome;
 	
-	private BigDecimal preco;
+	private Double preco;
 	
 	public ProdutoDTO(Produto obj) {
 		id = obj.getId();

@@ -26,6 +26,7 @@ public class PedidoResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
+
 	@GetMapping
 	public List<Pedido> listar(){
 		return service.findAll();

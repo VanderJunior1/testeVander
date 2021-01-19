@@ -1,7 +1,6 @@
 package br.com.teste.vander.domain;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -26,7 +25,7 @@ public class Produto  implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private BigDecimal preco;
+	private Double preco;
 	
 	@JsonIgnore
 	@ManyToMany
@@ -43,7 +42,7 @@ public class Produto  implements Serializable {
 	public Produto() {
 	}
 
-	public Produto(Integer id, String nome, BigDecimal preco) {
+	public Produto(Integer id, String nome, Double preco) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -76,11 +75,11 @@ public class Produto  implements Serializable {
 		this.nome = nome;
 	}
 
-	public BigDecimal getPreco() {
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(BigDecimal preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 
