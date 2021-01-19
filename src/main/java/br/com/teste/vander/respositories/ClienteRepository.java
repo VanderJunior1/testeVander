@@ -8,4 +8,6 @@ import br.com.teste.vander.domain.Cliente;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
+	Cliente findByEmail(String email);
+
 }
