@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.teste.vander.domain.Pedido;
 import br.com.teste.vander.services.PedidoService;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value = "/pedidos")
@@ -20,6 +21,7 @@ public class PedidoResource {
 	@Autowired
 	private PedidoService service;
 	
+	@ApiOperation(value =  "Busca o Pedido por Id")
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Pedido> find(@PathVariable Integer id) {
 		Pedido obj = service.find(id);
@@ -27,6 +29,7 @@ public class PedidoResource {
 	}
 	
 
+	@ApiOperation(value =  "Lista todas os Pedidos")
 	@GetMapping
 	public List<Pedido> listar(){
 		return service.findAll();

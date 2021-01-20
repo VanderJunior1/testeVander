@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.teste.vander.domain.UsuarioResponse;
 import br.com.teste.vander.services.UsuarioService;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 
 @RestController
@@ -16,6 +17,7 @@ public class UsuarioResourceAPI {
 
     private UsuarioService service;
 
+    @ApiOperation(value =  "Busca por um Cliente por um Id")
     @GetMapping
     public ResponseEntity<UsuarioResponse> consulta(){
         return ResponseEntity.ok(service.get());

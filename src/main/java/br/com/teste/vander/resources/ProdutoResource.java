@@ -15,6 +15,7 @@ import br.com.teste.vander.domain.Produto;
 import br.com.teste.vander.domain.dto.ProdutoDTO;
 import br.com.teste.vander.resources.utils.URL;
 import br.com.teste.vander.services.ProdutoService;
+import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value="/produtos")
@@ -23,12 +24,14 @@ public class ProdutoResource {
 	@Autowired
 	private ProdutoService service;
 	
+	@ApiOperation(value =  "Busca o Produto por Id")
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Produto> find(@PathVariable Integer id) {
 		Produto obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	
+	@ApiOperation(value =  "Lista todas os Produtos com paginação")
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<Page<ProdutoDTO>> findPage(
 			@RequestParam(value="nome", defaultValue="") String nome, 
