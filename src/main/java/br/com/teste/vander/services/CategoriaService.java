@@ -66,4 +66,8 @@ public class CategoriaService {
 		return new Categoria(objDto.getId(), objDto.getNome());
 	}
 	
+	public boolean existsByNome(String nome) {
+		return repo.existsByNome(nome);
+	}
+	
 }

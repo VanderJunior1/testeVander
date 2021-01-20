@@ -58,6 +58,7 @@ public class Initialization implements CommandLineRunner {
 
 		Categoria c1 = new Categoria(null, "Informática");
 		Categoria c2 = new Categoria(null, "Escritório");
+		Categoria c3 = new Categoria(null, "Livraria");
 		
 		Produto p1 = new Produto(null, "Computador", 2000.00);
 		Produto p2 = new Produto(null, "Impressora", 800.00);
@@ -70,7 +71,7 @@ public class Initialization implements CommandLineRunner {
 		p2.getCategorias().addAll(Arrays.asList(c1,c2));
 		p3.getCategorias().addAll(Arrays.asList(c1));
 		
-		cateRepo.saveAll(Arrays.asList(c1, c2));
+		cateRepo.saveAll(Arrays.asList(c1, c2, c3));
 		prodRepo.saveAll(Arrays.asList(p1,p2,p3));
 		
 		Estado est1 = new Estado(null, "Minas Gerais");
