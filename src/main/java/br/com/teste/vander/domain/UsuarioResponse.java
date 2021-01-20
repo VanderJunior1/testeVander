@@ -11,7 +11,7 @@ public class UsuarioResponse {
 
 	@EqualsAndHashCode.Include
 	private Integer id;
-	private String nome;
+	private String name;
 	private String email;
 	private Boolean ativo;
 }
