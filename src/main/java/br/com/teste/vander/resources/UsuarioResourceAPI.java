@@ -17,7 +17,7 @@ public class UsuarioResourceAPI {
 
     private UsuarioService service;
 
-    @ApiOperation(value =  "Busca por um código de Usuário")
+    @ApiOperation(value =  "Busca por um código da API Externa do Usuário")
     @GetMapping
     public ResponseEntity<UsuarioResponse> consulta(){
         return ResponseEntity.ok(service.get());
