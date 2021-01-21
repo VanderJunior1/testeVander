@@ -29,13 +29,6 @@ public class ClienteResource {
 
 	@Autowired
 	private ClienteService service;
-
-	@ApiOperation(value =  "Busca o Cliente por Id")
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Cliente> find(@PathVariable Integer id) {
-		Cliente obj = service.find(id);
-		return ResponseEntity.ok().body(obj);
-	}
 	
 	@ApiOperation(value =  "Insere um novo Cliente")
 	@RequestMapping(method=RequestMethod.POST)
