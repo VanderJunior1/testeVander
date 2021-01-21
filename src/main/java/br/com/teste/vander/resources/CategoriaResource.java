@@ -33,7 +33,7 @@ public class CategoriaResource {
 	private CategoriaService service;
 	
 	@ApiOperation(value =  "Busca a Categoria por Id")
-	@GetMapping(value = "/{id}")
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public Categoria find(@PathVariable Integer id){
 		 return service.find(id);
 	}
